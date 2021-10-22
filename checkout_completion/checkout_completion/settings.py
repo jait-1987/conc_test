@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'checkout_ms',
 ]
 
 MIDDLEWARE = [
@@ -132,3 +133,9 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+# Availablity Urls, In production change to api gateway base url
+AVAILABLE_QTY_URL = "http://localhost:8001/"
+AVAILABLE_QTY_EP = "product/available_qty/"
+UPDATE_QTY_EP = "product/update_qty/"
+
